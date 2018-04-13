@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(┬＿┬)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+</head>
+
+<script>
+    document.documentElement.style.fontSize = window.innerWidth / 375 * 5
+</script>
+
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+            <div class="title">新闻</div>
+        </div>
+        <i class="icon iconfont">&#xe6eb;</i>
+        <span><i class="pic"></i> <b class="B">有图</b></span>
+    </div>
+    <div class="opt">
+        <ul>
+            <li>
+                <a href="javascript:;">国内</a>
+            </li>
+            <li>
+                <a href="javascript:;">国际</a>
+            </li>
+            <li>
+                <a href="javascript:;">社会</a>
+            </li>
+            <li>
+                <a href="javascript:;">军迷圈</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="more">收起∧</a>
+            </li>
+        </ul>
+        <ul class="s" style="display: flex;">
+            <li>
+                <a href="javascript:;">视频</a>
+            </li>
+            <li>
+                <a href="javascript:;">图片</a>
+            </li>
+            <li>
+                <a href="javascript:;">话题</a>
+            </li>
+            <li>
+                <a href="javascript:;">政要动向</a>
+            </li>
+            <li>
+                <a href="javascript:;">滚动</a>
+            </li>
+        </ul>
+
+    </div>
+    <section class="icon-list">
+        <div class="swiper-container iconbox">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="images/1.jpg" alt="">
+                    <p>宁波爆炸现场 整栋楼的窗户被震爆了</p>
+                </li>
+                <li class="swiper-slide">
+                    <img src="images/2.jpg" alt="">
+                    <p>新浪爱拍周选美图类作品</p>
+                </li>
+                <li class="swiper-slide">
+                    <img src="images/3.jpg" alt="">
+                    <p>农博馆1800斤猪王成镇馆之宝</p>
+                </li>
+                <li class="swiper-slide">
+                    <img src="images/4.jpg" alt="">
+                    <p>广西山石滚落3轮 至6死9伤</p>
+                </li>
+            </ul>
+        </div>
+        <div class="pagebox"></div>
+
+    </section>
+    <div class="iflike">
+        <dl>
+            <dd>
+                <img src="images/mes1.jpg" alt="" />
+            </dd>
+            <dt>
+                    <h2>比尔-盖茨当选中国工程院院士</h2>
+                </dt>
+        </dl>
+        <dl>
+            <dd>
+                <img src="images/mes2.jpg" alt="" />
+            </dd>
+            <dt>
+                    <h2>北京有这么些精品温泉,上去哪儿只要5折立享!</h2>
+                </dt>
+        </dl>
+        <dl>
+            <dd>
+                <img src="images/mes3.jpg" alt="" />
+            </dd>
+            <dt>
+                    <h2>盖茨成新外籍院士:2位中委10位中候委跟他成同事</h2>
+                </dt>
+        </dl>
+    </div>
+</body>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    var pic = document.querySelector('.pic'),
+        B = document.querySelector('.B'),
+        more = document.querySelector('.more'),
+        s = document.querySelector('.s')
+    pic.onclick = function() {
+        if (this.style.float === 'right') {
+            this.style.float = 'left'
+            B.innerHTML = '有图'
+        } else {
+            this.style.float = 'right';
+            B.innerHTML = '无图'
+        }
+    }
+    more.onclick = function() {
+        if (s.style.display == 'none') {
+            s.style.display = 'flex'
+            more.innerHTML = '收起∧'
+        } else {
+            s.style.display = 'none'
+            more.innerHTML = '更多∨'
+        }
+    }
+    new Swiper('.iconbox', {
+        pagination: '.pagebox',
+        loop: true,
+        paginationType: 'fraction'
+    })
+</script>
+
+</html>
